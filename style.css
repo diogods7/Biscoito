@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 6.25%;
+    --clr-blue-h: hsla(240, 27%, 28%, 1);
+    --clr-blue-p: hsla(238, 27%, 28%, 0.8);
+    --clr-gray: hsla(198, 32%, 92%, 1);
+    --clr-orange: hsla(35, 100%, 50%, 1);
+
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body,
+button {
+    font-family: 'Montserrat';
+}
+
+button {
+    font-weight: 600;
+    color: #fff;
+    border-radius: 4rem;
+    background: var(--clr-orange);
+    cursor: pointer;
+}
+
+button:hover {
+    background: hsl(32, 100%, 50%);
+}
+
+main {
+    width: min(424rem, 90%);
+    background: #fff;
+    font-size: 16rem;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 48rem 64rem 64rem;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+
+
+}
+
+.hide {
+    display: none;
+}
+
+h1 {
+    color: var(--clr-blue-h);
+    font-size: 24rem;
+}
+
+p {
+    font-size: 16rem;
+    color: var(--clr-blue-p);
+    margin-top: 16rem;
+}
+
+img {
+    margin-top: 24rem;
+}
+
+#cookie:hover {
+    animation: rotateCookie 0.4s infinite step-start;
+    cursor: pointer;
+}
+
+@keyframes rotateCookie {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    25% {
+        transform: translateX(10px) translateY(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px) translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+.bilhete {
+    margin-top: 60rem;
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 10rem;
+    animation: fadein 1s ease-in;
+}
+
+@keyframes fadein {
+    from {
+        transform: translateY(150%) scale(0.2);
+        opacity: 0;
+    }
+
+    to { 
+        opacity: 1;
+    }
+}
+
+.bilhete p {
+    font-size: 24rem;
+    font-family: 'Dancing Script';
+    color: #000;
+    margin-top: 0;
+}
+
+
+
+button {
+    border: none;
+    padding: 16rem;
+    margin-top: 75rem;
+}
